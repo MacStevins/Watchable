@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/template/entities.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/world/grass.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/world/wall.tres" type="TileSet" id=3]
 [ext_resource path="res://assets/world/plants.tres" type="TileSet" id=4]
 [ext_resource path="res://function/scenes/lvl1.gd" type="Script" id=5]
+[ext_resource path="res://scenes/template/hud.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade"
@@ -96,3 +97,5 @@ cell_size = Vector2( 8, 8 )
 collision_layer = 0
 format = 1
 tile_data = PoolIntArray( 2490442, 0, 0, 2818041, 1, 0, 2752561, 2, 0, 2883645, 4, 0, 2949127, 7, 0, 2949128, 4, 0, 2949144, 2, 0, 2949155, 8, 0, 2949183, 4, 0, 3014666, 3, 0, 3014694, 8, 0, 3014716, 3, 0, 3014717, 4, 0 )
+
+[node name="hud" parent="." instance=ExtResource( 6 )]

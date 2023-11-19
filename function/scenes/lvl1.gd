@@ -13,4 +13,4 @@ func _ready():
 		new_game()
 
 func _process(_delta):
-	pass
+	print(global.handsCollected)

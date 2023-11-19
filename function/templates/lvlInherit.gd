@@ -4,8 +4,10 @@ func _init():
 	visible = false;
 
 func _ready():
+	visible = false;
 	$animPlayer.connect("animation_finished", self, "fadeInAnimFinished")
 	$animPlayer.play_backwards("fade")
+	$hud/pause.connect("pause_game", self, "pauseGame")
 	new_game()
 	visible = true;
 
@@ -31,3 +33,7 @@ func fadeInAnimFinished(_animName):
 func fadeOutAnimFinished(_animName, lvlName):
 	global.playerPos = $entities/player.position
 	get_tree().change_scene("res://scenes/main/" + lvlName + ".tscn")
+
+func pauseGame():
+	pass
+	$animPlayer.stop()

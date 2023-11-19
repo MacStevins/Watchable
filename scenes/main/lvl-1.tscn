@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/template/entities.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/world/wall.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/world/plants.tres" type="TileSet" id=4]
 [ext_resource path="res://assets/world/grass.tres" type="TileSet" id=5]
 [ext_resource path="res://assets/world/triggers.tres" type="TileSet" id=6]
+[ext_resource path="res://scenes/template/hud.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade"
@@ -69,3 +70,5 @@ tile_data = PoolIntArray( 39, 1, 0 )
 
 [node name="playerStart" type="Position2D" parent="entities"]
 position = Vector2( 80, 139 )
+
+[node name="hud" parent="." instance=ExtResource( 7 )]
